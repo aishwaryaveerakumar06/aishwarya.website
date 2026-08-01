@@ -1,0 +1,320 @@
+* GENERAL SETTINGS */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+}
+
+
+body{
+
+    background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+    color:white;
+    min-height:100vh;
+
+}
+
+
+/* BACKGROUND EFFECT */
+
+body::before{
+
+    content:"";
+    position:fixed;
+    width:450px;
+    height:450px;
+    background:#00ffb3;
+    opacity:0.15;
+    filter:blur(200px);
+    top:-100px;
+    left:-100px;
+    z-index:-1;
+
+}
+
+
+body::after{
+
+    content:"";
+    position:fixed;
+    width:450px;
+    height:450px;
+    background:#00c3ff;
+    opacity:0.15;
+    filter:blur(200px);
+    bottom:-100px;
+    right:-100px;
+    z-index:-1;
+
+}
+
+
+
+/* MAIN CONTAINER */
+
+.container{
+
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+    padding:50px 0;
+
+}
+
+
+
+/* HEADER */
+
+h1{
+
+    text-align:center;
+    font-size:48px;
+    letter-spacing:2px;
+    margin-bottom:15px;
+
+}
+
+
+.subtitle{
+
+    text-align:center;
+    font-size:18px;
+    color:#d6f5ff;
+    margin-bottom:60px;
+
+}
+
+
+
+/* SECTION */
+
+.section{
+
+    margin-bottom:60px;
+
+}
+
+
+
+.section-title{
+
+    font-size:32px;
+    color:#7CFFD4;
+    border-left:6px solid #7CFFD4;
+    padding-left:15px;
+    margin-bottom:25px;
+
+}
+
+
+
+/* CARD DESIGN */
+
+.card{
+
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(15px);
+
+    border:1px solid rgba(255,255,255,0.15);
+
+    padding:25px;
+
+    border-radius:20px;
+
+    margin-bottom:25px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,0.25);
+
+    transition:0.4s;
+
+}
+
+
+
+.card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 20px 40px rgba(0,255,179,0.3);
+
+}
+
+
+
+/* GRID */
+
+.grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+    gap:25px;
+
+}
+
+
+
+/* HEADINGS */
+
+
+.card h3{
+
+    color:#A4FFE8;
+
+    margin-bottom:15px;
+
+    font-size:22px;
+
+}
+
+
+
+/* LIST STYLE */
+
+
+ul{
+
+    padding-left:20px;
+
+    line-height:2;
+
+}
+
+
+li{
+
+    margin-bottom:5px;
+
+}
+
+
+
+/* LINKS */
+
+
+a{
+
+    color:#8AEFFF;
+
+    text-decoration:none;
+
+    font-weight:500;
+
+}
+
+
+a:hover{
+
+    color:#7CFFD4;
+
+    text-decoration:underline;
+
+}
+
+
+
+/* PROFILE SECTION */
+
+.profile{
+
+    text-align:center;
+
+}
+
+
+
+/* RESUME BUTTON */
+
+
+.resume-btn{
+
+    display:inline-block;
+
+    margin-top:25px;
+
+    padding:14px 30px;
+
+    background:linear-gradient(135deg,#00b894,#00cec9);
+
+    color:white;
+
+    text-decoration:none;
+
+    border-radius:50px;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    transition:0.4s;
+
+    box-shadow:0 8px 20px rgba(0,0,0,0.25);
+
+}
+
+
+
+.resume-btn:hover{
+
+    transform:translateY(-5px);
+
+    background:linear-gradient(135deg,#00cec9,#00b894);
+
+    box-shadow:0 15px 30px rgba(0,184,148,0.4);
+
+    text-decoration:none;
+
+}
+
+
+
+/* FOOTER */
+
+
+footer{
+
+    text-align:center;
+
+    padding:30px;
+
+    color:#ddd;
+
+    font-size:15px;
+
+}
+
+
+
+
+
+/* MOBILE RESPONSIVE */
+
+
+@media(max-width:768px){
+
+
+    h1{
+
+        font-size:34px;
+
+    }
+
+
+    .section-title{
+
+        font-size:26px;
+
+    }
+
+
+    .container{
+
+        width:92%;
+
+    }
+
+
+}
