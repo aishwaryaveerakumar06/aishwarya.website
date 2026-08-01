@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aishwarya | Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+color:white;
+overflow-x:hidden;
+}
+
+/* Background Animation */
+
+body::before{
+content:"";
+position:fixed;
+width:500px;
+height:500px;
+background:#00ffb3;
+filter:blur(220px);
+opacity:.18;
+top:-120px;
+left:-120px;
+z-index:-1;
+}
+
+body::after{
+content:"";
+position:fixed;
+width:500px;
+height:500px;
+background:#00c3ff;
+filter:blur(220px);
+opacity:.18;
+bottom:-150px;
+right:-100px;
+z-index:-1;
+}
+
+.container{
+width:90%;
+max-width:1200px;
+margin:auto;
+padding:50px 0;
+}
+
+h1{
+text-align:center;
+font-size:48px;
+margin-bottom:10px;
+letter-spacing:2px;
+}
+
+.subtitle{
+text-align:center;
+color:#d6f5ff;
+margin-bottom:60px;
+font-size:18px;
+}
+
+.section{
+margin-bottom:60px;
+}
+
+.section-title{
+font-size:32px;
+margin-bottom:25px;
+color:#7CFFD4;
+border-left:6px solid #7CFFD4;
+padding-left:15px;
+}
+
+.card{
+background:rgba(255,255,255,0.08);
+backdrop-filter:blur(15px);
+border:1px solid rgba(255,255,255,.15);
+padding:25px;
+border-radius:20px;
+margin-bottom:25px;
+transition:.4s;
+box-shadow:0 10px 25px rgba(0,0,0,.25);
+}
+
+.card:hover{
+transform:translateY(-8px);
+box-shadow:0 20px 40px rgba(0,255,179,.3);
+}
+
+.card h3{
+color:#A4FFE8;
+margin-bottom:15px;
+}
+
+ul{
+padding-left:20px;
+line-height:2;
+}
+
+li{
+margin-bottom:5px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:25px;
+}
+
+.profile{
+text-align:center;
+padding:20px;
+}
+
+.profile a{
+color:#8AEFFF;
+text-decoration:none;
+font-weight:600;
+}
+
+.profile a:hover{
+color:#7CFFD4;
+}
+
+.language-box{
+display:flex;
+gap:15px;
+flex-wrap:wrap;
+}
+
+.language{
+background:#00b894;
+padding:10px 20px;
+border-radius:30px;
+font-weight:600;
+}
+
+footer{
+text-align:center;
+padding:30px;
+color:#ddd;
+font-size:15px;
+}
+
+@media(max-width:768px){
+
+h1{
+font-size:34px;
+}
+
+.section-title{
+font-size:26px;
+}
+
+}
+
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+<h1>Aishwarya Veerakumar </h1>
+
+<p class="subtitle">
+Biotechnology Student | Laboratory Enthusiast 
+</p>
+
+
+<!-- TECHNICAL SKILLS -->
+
+<section class="section">
+
+<h2 class="section-title">Technical Skills</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>🧪 Laboratory Skills</h3>
+
+<ul>
+<li>Laboratory Safety Practices</li>
+<li>Sample Handling</li>
+<li>Microbial Culture Techniques</li>
+<li>Staining Techniques</li>
+<li>Microscopy</li>
+<li>Sterilization Techniques</li>
+<li>Pipetting and Solution Preparation</li>
+</ul>
+
+</div>
+
+<div class="card">
+<h3>🔬 Cell Biology & Immunology</h3>
+
+<ul>
+<li>Slide Preparation</li>
+<li>Antigen–Antibody Interaction Basics</li>
+<li>Basic Immunoassay Techniques</li>
+<li>Cell Structure Analysis</li>
+</ul>
+
+</div>
+
+<div class="card">
+<h3>🏭 Industrial Biotechnology</h3>
+
+<ul>
+<li>Biohydrogen Production</li>
+</ul>
+
+</div>
+
+<div class="card">
+<h3>💻 Other Skills</h3>
+
+<ul>
+<li>Microsoft Office</li>
+<li>Canva</li>
+</ul>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- SOFT SKILLS -->
+
+<section class="section">
+
+<h2 class="section-title">Soft Skills</h2>
+
+<div class="grid">
+
+<div class="card">
+<ul>
+<li>Communication</li>
+<li>Team Work</li>
+<li>Adaptability</li>
+</ul>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- INTERNSHIP -->
+
+<section class="section">
+
+<h2 class="section-title">Internship Experience</h2>
+
+<div class="card">
+
+<h3>Microbiology Intern – Sasaam Biologicals Pvt. Ltd.</h3>
+
+<ul>
+<li>Performed microbial culture techniques and staining methods.</li>
+<li>Learned aseptic handling and laboratory safety procedures.</li>
+<li>Assisted in sample preparation and analysis.</li>
+</ul>
+
+</div>
+
+<div class="card">
+
+<h3>Phytochemicals & Drug Discovery – Institute of Innovations</h3>
+
+<ul>
+<li>Studied plant-based compound extraction methods.</li>
+<li>Gained exposure to drug screening concepts.</li>
+</ul>
+
+</div>
+
+<div class="card">
+
+<h3>Biohydrogen Production from Solid Waste – Anna University</h3>
+
+<ul>
+<li>Waste to Energy – Converting organic waste into biohydrogen.</li>
+<li>Dark Fermentation – Producing hydrogen using anaerobic microorganisms.</li>
+<li>Sustainability – Reducing waste and generating clean renewable energy.</li>
+</ul>
+
+</div>
+
+</section>
+
+
+<!-- PROJECT -->
+
+<section class="section">
+
+<h2 class="section-title">Projects</h2>
+
+<div class="card">
+
+<h3>Frugal DNA Extraction Kit from Saliva (Group Project)</h3>
+
+<ul>
+
+<li>Collaborated with a team to design a low-cost DNA extraction method using casein-based filtration.</li>
+
+<li>Assisted in experimental setup and procedure.</li>
+
+<li>Focused on rural diagnostic applications.</li>
+
+</ul>
+
+</div>
+
+</section>
+
+
+<!-- CERTIFICATIONS -->
+
+<section class="section">
+
+<h2 class="section-title">Certifications</h2>
+
+<div class="card">
+
+<ul>
+
+<li>Phytochemistry and Drug Discovery – Institute of Innovations (Online) (1st Year)</li>
+
+<li>Microbiology Internship – Sasaam Biologicals Pvt. Ltd. (2nd Year)</li>
+
+<li>Experimental Biotechnology – NPTEL (2nd Year)</li>
+
+<li>Food Science and Technology – NPTEL (2nd Year)</li>
+
+<li>Microsensors, Implantable Devices and Rodent Surgeries for Biomedical Applications – NPTEL (2nd Year)</li>
+
+<li>Biohydrogen Production from Solid Waste – Anna University (2nd Year)</li>
+
+</ul>
+
+</div>
+
+</section>
+
+
+<!-- ONLINE PROFILE -->
+
+<section class="section">
+
+<h2 class="section-title">Online Profile</h2>
+
+<div class="card profile">
+
+<h3>LinkedIn</h3>
+
+<p>
+
+<a href="https://www.linkedin.com/in/aishwarya-veerakumar-0b2099328" target="_blank">
+
+linkedin.com/in/aishwarya-veerakumar-0b2099328
+
+</a>
+
+</p>
+
+</div>
+
+</section>
+
+<section class="section" id="contact">
+
+<h2 class="section-title">Contact Me</h2>
+
+<div class="card profile">
+
+<p>
+<strong>📧 Email:</strong>
+<a href="mailto:aishwaryaveerakumar81@gmail.com">
+aishwaryaveerakumar81@gmail.com
+</a>
+</p>
+
+<br>
+
+<strong>📍 Location:</strong>
+Chennai, Tamil Nadu, India
+</p>
+
+<br>
+
+<a href="https://drive.google.com/file/d/1mBLcXV1zHlU-G83pUK2mnxK0SAXFLs60/view?usp=drivesdk" download class="resume-btn">
+📄 Download Resume
+</a>
+
+
+</div>
+
+</section>
+
+
+<footer>
+
+© 2026 Aishwarya V | Biotechnology Portfolio
+
+</footer>
+
+</div>
+
+</body>
+</html>
