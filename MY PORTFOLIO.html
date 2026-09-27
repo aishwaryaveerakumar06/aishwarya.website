@@ -1,426 +1,1166 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Aishwarya | Portfolio</title>
+<meta name="theme-color" content="#102e2b">
+<meta name="description" content="Aishwarya Veerakumar | Biotechnology Student Portfolio">
+<title>Aishwarya Veerakumar | Biotechnology Portfolio</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
 <style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
-scroll-behavior:smooth;
+:root {
+  --bg: #f5f8f4;
+  --surface: #ffffff;
+  --green: #176b55;
+  --green-dark: #103e35;
+  --mint: #cce9d9;
+  --mint-light: #e8f4eb;
+  --text: #1b302b;
+  --muted: #65766e;
+  --border: #dce9df;
+  --shadow: 0 12px 35px rgba(23, 68, 52, .08);
 }
 
-body{
-background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
-color:white;
-overflow-x:hidden;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
-/* Background Animation */
-
-body::before{
-content:"";
-position:fixed;
-width:500px;
-height:500px;
-background:#00ffb3;
-filter:blur(220px);
-opacity:.18;
-top:-120px;
-left:-120px;
-z-index:-1;
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+  overflow-x: hidden;
 }
 
-body::after{
-content:"";
-position:fixed;
-width:500px;
-height:500px;
-background:#00c3ff;
-filter:blur(220px);
-opacity:.18;
-bottom:-150px;
-right:-100px;
-z-index:-1;
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
-.container{
-width:90%;
-max-width:1200px;
-margin:auto;
-padding:50px 0;
+button {
+  font: inherit;
 }
 
-h1{
-text-align:center;
-font-size:48px;
-margin-bottom:10px;
-letter-spacing:2px;
+.container {
+  width: min(1120px, 90%);
+  margin: auto;
 }
 
-.subtitle{
-text-align:center;
-color:#d6f5ff;
-margin-bottom:60px;
-font-size:18px;
+/* NAVIGATION */
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(245, 248, 244, .94);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border);
 }
 
-.section{
-margin-bottom:60px;
+.navbar {
+  min-height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
 }
 
-.section-title{
-font-size:32px;
-margin-bottom:25px;
-color:#7CFFD4;
-border-left:6px solid #7CFFD4;
-padding-left:15px;
+.logo {
+  font-family: 'Outfit', sans-serif;
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--green-dark);
+  white-space: nowrap;
 }
 
-.card{
-background:rgba(255,255,255,0.08);
-backdrop-filter:blur(15px);
-border:1px solid rgba(255,255,255,.15);
-padding:25px;
-border-radius:20px;
-margin-bottom:25px;
-transition:.4s;
-box-shadow:0 10px 25px rgba(0,0,0,.25);
+.logo span {
+  color: #48a77b;
 }
 
-.card:hover{
-transform:translateY(-8px);
-box-shadow:0 20px 40px rgba(0,255,179,.3);
+.nav-links {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 22px;
+  list-style: none;
 }
 
-.card h3{
-color:#A4FFE8;
-margin-bottom:15px;
+.nav-links a {
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 700;
+  transition: .25s;
 }
 
-ul{
-padding-left:20px;
-line-height:2;
+.nav-links a:hover {
+  color: var(--green);
 }
 
-li{
-margin-bottom:5px;
+.menu-btn {
+  display: none;
+  border: 0;
+  background: var(--mint-light);
+  color: var(--green-dark);
+  border-radius: 10px;
+  padding: 10px 13px;
+  cursor: pointer;
 }
 
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:25px;
+/* HERO */
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 85% 15%, rgba(117, 205, 160, .2), transparent 30%),
+    linear-gradient(125deg, #103b32, #165b49 70%, #1c6c54);
+  color: white;
+  padding: 92px 0 86px;
 }
 
-.profile{
-text-align:center;
-padding:20px;
+.hero::before {
+  content: "";
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  border: 1px solid rgba(208, 244, 220, .16);
+  border-radius: 50%;
+  right: -100px;
+  top: -130px;
+  box-shadow: 0 0 0 40px rgba(208,244,220,.035),
+              0 0 0 80px rgba(208,244,220,.025);
 }
 
-.profile a{
-color:#8AEFFF;
-text-decoration:none;
-font-weight:600;
+.hero-inner {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1.35fr .65fr;
+  align-items: center;
+  gap: 45px;
 }
 
-.profile a:hover{
-color:#7CFFD4;
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  background: rgba(222, 250, 231, .12);
+  border: 1px solid rgba(222, 250, 231, .23);
+  padding: 7px 14px;
+  border-radius: 50px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #d8f5e4;
+  margin-bottom: 22px;
 }
 
-.language-box{
-display:flex;
-gap:15px;
-flex-wrap:wrap;
+.hero h1 {
+  font-family: 'Outfit', sans-serif;
+  font-size: clamp(38px, 6vw, 65px);
+  line-height: 1.1;
+  font-weight: 800;
+  letter-spacing: -.8px;
+  margin-bottom: 16px;
 }
 
-.language{
-background:#00b894;
-padding:10px 20px;
-border-radius:30px;
-font-weight:600;
+.hero h1 span {
+  color: #a9e7c1;
 }
 
-footer{
-text-align:center;
-padding:30px;
-color:#ddd;
-font-size:15px;
+.hero-description {
+  color: #e0f0e7;
+  font-size: 16px;
+  max-width: 590px;
+  margin-bottom: 27px;
 }
 
-@media(max-width:768px){
-
-h1{
-font-size:34px;
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
 }
 
-.section-title{
-font-size:26px;
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 9px;
+  border-radius: 10px;
+  padding: 12px 19px;
+  font-weight: 700;
+  font-size: 13px;
+  transition: .25s;
+  cursor: pointer;
 }
 
+.btn-light {
+  background: #e6f5e9;
+  color: var(--green-dark);
 }
 
+.btn-light:hover {
+  background: white;
+  transform: translateY(-3px);
+}
+
+.btn-outline {
+  border: 1px solid rgba(255,255,255,.5);
+  color: white;
+}
+
+.btn-outline:hover {
+  background: rgba(255,255,255,.12);
+  transform: translateY(-3px);
+}
+
+.hero-art {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dna-card {
+  width: 235px;
+  height: 235px;
+  border-radius: 50%;
+  border: 1px solid rgba(215, 255, 225, .3);
+  background: radial-gradient(circle, rgba(196, 245, 213, .19), rgba(196,245,213,.03) 65%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #b8efcb;
+  font-size: 108px;
+  box-shadow: 0 0 65px rgba(143, 235, 174, .13);
+  animation: float 5s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+/* GENERAL SECTIONS */
+
+main {
+  padding: 25px 0 55px;
+}
+
+.section {
+  padding: 55px 0 15px;
+  scroll-margin-top: 85px;
+}
+
+.section-heading {
+  margin-bottom: 27px;
+}
+
+.section-kicker {
+  color: #47956e;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+.section-title {
+  font-family: 'Outfit', sans-serif;
+  color: var(--green-dark);
+  font-size: clamp(27px, 4vw, 35px);
+  line-height: 1.25;
+  font-weight: 800;
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  width: 48px;
+  height: 4px;
+  border-radius: 10px;
+  background: #5db58a;
+  margin-top: 12px;
+}
+
+.section-subtitle {
+  color: var(--muted);
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+/* CARDS */
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 17px;
+  padding: 25px;
+  box-shadow: var(--shadow);
+  transition: transform .3s, box-shadow .3s, border-color .3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  border-color: #a9d6b9;
+  box-shadow: 0 18px 40px rgba(23,68,52,.12);
+}
+
+.card h3 {
+  font-family: 'Outfit', sans-serif;
+  font-size: 18px;
+  line-height: 1.45;
+  color: var(--green-dark);
+  margin-bottom: 10px;
+}
+
+.card p {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(245px, 1fr));
+  gap: 19px;
+}
+
+/* ABOUT */
+
+.about-card {
+  display: grid;
+  grid-template-columns: 65px 1fr;
+  gap: 20px;
+  align-items: start;
+  background: linear-gradient(120deg, #ffffff, #f1f8f1);
+}
+
+.about-icon {
+  width: 58px;
+  height: 58px;
+  display: grid;
+  place-items: center;
+  border-radius: 17px;
+  background: #dcefe1;
+  color: var(--green);
+  font-size: 26px;
+}
+
+.about-text {
+  color: #53665e;
+  font-size: 15px;
+  line-height: 1.95;
+}
+
+/* SKILLS */
+
+.skill-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.skill-icon {
+  width: 45px;
+  height: 45px;
+  display: grid;
+  place-items: center;
+  border-radius: 13px;
+  background: var(--mint-light);
+  color: var(--green);
+  font-size: 19px;
+  margin-bottom: 15px;
+}
+
+.skill-list {
+  list-style: none;
+  display: grid;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.skill-list li {
+  position: relative;
+  padding-left: 18px;
+  font-size: 13px;
+  color: #596a62;
+}
+
+.skill-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 10px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #62b889;
+}
+
+/* SOFT SKILLS */
+
+.soft-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.skill-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  background: white;
+  border: 1px solid var(--border);
+  color: #345849;
+  border-radius: 50px;
+  padding: 10px 17px;
+  font-size: 13px;
+  font-weight: 700;
+  box-shadow: 0 5px 15px rgba(20,60,40,.04);
+}
+
+.skill-pill i {
+  color: #43976b;
+}
+
+/* EXPERIENCE AND PROJECTS */
+
+.timeline {
+  display: grid;
+  gap: 18px;
+}
+
+.timeline-card {
+  border-left: 4px solid #69bb8d;
+  padding: 23px 26px;
+}
+
+.timeline-card ul {
+  padding-left: 20px;
+  margin-top: 12px;
+  color: #596a62;
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+.timeline-card li {
+  padding-left: 3px;
+  margin-bottom: 4px;
+}
+
+.tag {
+  display: inline-block;
+  margin-bottom: 10px;
+  padding: 4px 10px;
+  border-radius: 30px;
+  background: var(--mint-light);
+  color: #367653;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .5px;
+  text-transform: uppercase;
+}
+
+.project-card {
+  background: linear-gradient(140deg, #fff, #f0f7f0);
+}
+
+.project-icon {
+  font-size: 29px;
+  color: #46996b;
+  margin-bottom: 12px;
+}
+
+/* WORKSHOPS AND EVENTS */
+
+.activity-card {
+  display: flex;
+  gap: 17px;
+  align-items: flex-start;
+}
+
+.activity-icon {
+  flex: 0 0 47px;
+  height: 47px;
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  background: #e1f1e5;
+  color: var(--green);
+  font-size: 20px;
+}
+
+.activity-card h3 {
+  margin-bottom: 8px;
+}
+
+.activity-card p {
+  line-height: 1.8;
+}
+
+.activity-label {
+  display: inline-block;
+  color: #42835f;
+  background: #edf6ed;
+  border-radius: 5px;
+  padding: 3px 8px;
+  font-size: 10px;
+  font-weight: 800;
+  margin-bottom: 9px;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+}
+
+/* CERTIFICATIONS */
+
+.cert-list {
+  list-style: none;
+  display: grid;
+  gap: 13px;
+}
+
+.cert-list li {
+  display: grid;
+  grid-template-columns: 30px 1fr;
+  align-items: start;
+  gap: 10px;
+  color: #53665e;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.cert-list i {
+  color: #4a9b6f;
+  margin-top: 4px;
+}
+
+/* ONLINE PROFILE */
+
+.profile-card {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.profile-link {
+  color: var(--green);
+  font-weight: 700;
+  font-size: 13px;
+  overflow-wrap: anywhere;
+}
+
+.profile-link:hover {
+  text-decoration: underline;
+}
+
+/* CONTACT */
+
+.contact-section {
+  background: linear-gradient(135deg, #103d34, #1d654e);
+  color: white;
+  padding: 50px 30px;
+  border-radius: 23px;
+  margin-top: 65px;
+}
+
+.contact-section .section-title {
+  color: white;
+}
+
+.contact-section .section-kicker {
+  color: #a9e7c1;
+}
+
+.contact-section .section-title::after {
+  background: #a9e7c1;
+}
+
+.contact-section .section-subtitle {
+  color: #d3e9dd;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 16px;
+  margin-top: 26px;
+}
+
+.contact-item {
+  background: rgba(255,255,255,.08);
+  border: 1px solid rgba(255,255,255,.14);
+  border-radius: 12px;
+  padding: 17px;
+}
+
+.contact-item i {
+  display: block;
+  font-size: 20px;
+  color: #a9e7c1;
+  margin-bottom: 8px;
+}
+
+.contact-item strong {
+  display: block;
+  font-size: 12px;
+  color: #bfe5ce;
+  margin-bottom: 3px;
+}
+
+.contact-item a, .contact-item span {
+  color: white;
+  font-size: 13px;
+  overflow-wrap: anywhere;
+}
+
+.resume-area {
+  margin-top: 25px;
+}
+
+.resume-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  background: #d7f1df;
+  color: #123e31;
+  padding: 12px 19px;
+  border-radius: 10px;
+  font-weight: 800;
+  font-size: 13px;
+  transition: .25s;
+}
+
+.resume-btn:hover {
+  background: white;
+  transform: translateY(-3px);
+}
+
+footer {
+  text-align: center;
+  color: #718178;
+  padding: 25px 10px 35px;
+  font-size: 12px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width: 850px) {
+  .nav-links {
+    gap: 12px;
+  }
+
+  .nav-links a {
+    font-size: 11px;
+  }
+
+  .hero-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-art {
+    display: none;
+  }
+}
+
+@media(max-width: 650px) {
+  .navbar {
+    min-height: 65px;
+    flex-wrap: wrap;
+    padding: 10px 0;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    padding: 8px 0;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-links li {
+    width: 100%;
+  }
+
+  .nav-links a {
+    display: block;
+    padding: 9px 4px;
+    font-size: 13px;
+  }
+
+  .hero {
+    padding: 65px 0;
+  }
+
+  .hero h1 {
+    font-size: 42px;
+  }
+
+  .hero-description {
+    font-size: 14px;
+  }
+
+  .section {
+    padding-top: 40px;
+  }
+
+  .card {
+    padding: 20px;
+  }
+
+  .about-card {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-section {
+    padding: 32px 20px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media(prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    animation: none !important;
+    transition: none !important;
+  }
+}
 </style>
-
 </head>
+
 <body>
 
-<div class="container">
+<header>
+  <div class="container navbar">
+    <a class="logo" href="#home">Aishwarya<span>.</span></a>
 
-<h1>Aishwarya Veerakumar </h1>
+    <button class="menu-btn" id="menuBtn" aria-label="Toggle navigation" aria-expanded="false">
+      <i class="fa-solid fa-bars"></i>
+    </button>
 
-<p class="subtitle">
-Biotechnology Student | Laboratory Enthusiast 
-</p>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#internships">Internships</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#workshops">Workshops</a></li>
+      <li><a href="#events">Events</a></li>
+      <li><a href="#certifications">Certificates</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</header>
 
+<!-- HERO -->
+
+<section class="hero" id="home">
+  <div class="container hero-inner">
+    <div>
+      <div class="eyebrow">
+        <i class="fa-solid fa-dna"></i>
+        Biotechnology Portfolio
+      </div>
+
+      <h1>Aishwarya <span>Veerakumar</span></h1>
+
+      <p class="hero-description">
+        Biotechnology Student | Laboratory Enthusiast |
+        Aspiring Biotechnologist
+      </p>
+
+      <div class="hero-buttons">
+        <a href="#about" class="btn btn-light">
+          <i class="fa-solid fa-user"></i> Explore My Portfolio
+        </a>
+        <a href="#contact" class="btn btn-outline">
+          <i class="fa-regular fa-envelope"></i> Contact Me
+        </a>
+      </div>
+    </div>
+
+    <div class="hero-art" aria-hidden="true">
+      <div class="dna-card">
+        <i class="fa-solid fa-dna"></i>
+      </div>
+    </div>
+  </div>
+</section>
+
+<main class="container">
+
+<!-- ABOUT ME -->
+
+<section class="section" id="about">
+  <div class="section-heading">
+    <div class="section-kicker">Get to know me</div>
+    <h2 class="section-title">About Me</h2>
+  </div>
+
+  <div class="card about-card">
+    <div class="about-icon">
+      <i class="fa-solid fa-microscope"></i>
+    </div>
+
+    <p class="about-text">
+      I am an aspiring biotechnologist with knowledge of Microbiology,
+      Cell Biology, and Agarose Gel Electrophoresis. I am passionate
+      about exploring innovative applications of biotechnology and
+      continuously developing my technical and practical skills.
+      Through internships, workshops, and paper presentations, I have
+      gained exposure to laboratory techniques, scientific research,
+      and emerging advancements in biotechnology. I am a dedicated,
+      adaptable, and quick learner with good communication and teamwork
+      skills. I am enthusiastic about gaining new experiences,
+      enhancing my expertise, and contributing to innovative research
+      and developments in the biotechnology field.
+    </p>
+  </div>
+</section>
 
 <!-- TECHNICAL SKILLS -->
 
-<section class="section">
+<section class="section" id="skills">
+  <div class="section-heading">
+    <div class="section-kicker">What I can do</div>
+    <h2 class="section-title">Technical Skills</h2>
+    <p class="section-subtitle">
+      Laboratory knowledge and biotechnology-related skills.
+    </p>
+  </div>
 
-<h2 class="section-title">Technical Skills</h2>
+  <div class="grid">
 
-<div class="grid">
+    <div class="card skill-card">
+      <div class="skill-icon"><i class="fa-solid fa-flask"></i></div>
+      <h3>Laboratory Skills</h3>
+      <ul class="skill-list">
+        <li>Laboratory Safety Practices</li>
+        <li>Sample Handling</li>
+        <li>Microbial Culture Techniques</li>
+        <li>Staining Techniques</li>
+        <li>Microscopy</li>
+        <li>Sterilization Techniques</li>
+        <li>Pipetting and Solution Preparation</li>
+      </ul>
+    </div>
 
-<div class="card">
-<h3>🧪 Laboratory Skills</h3>
+    <div class="card skill-card">
+      <div class="skill-icon"><i class="fa-solid fa-dna"></i></div>
+      <h3>Molecular & Cell Biology</h3>
+      <ul class="skill-list">
+        <li>Agarose Gel Electrophoresis</li>
+        <li>Slide Preparation</li>
+        <li>Cell Structure Analysis</li>
+        <li>Antigen–Antibody Interaction Basics</li>
+        <li>Basic Immunoassay Techniques</li>
+      </ul>
+    </div>
 
-<ul>
-<li>Laboratory Safety Practices</li>
-<li>Sample Handling</li>
-<li>Microbial Culture Techniques</li>
-<li>Staining Techniques</li>
-<li>Microscopy</li>
-<li>Sterilization Techniques</li>
-<li>Pipetting and Solution Preparation</li>
-</ul>
+    <div class="card skill-card">
+      <div class="skill-icon"><i class="fa-solid fa-industry"></i></div>
+      <h3>Industrial Biotechnology</h3>
+      <ul class="skill-list">
+        <li>Biohydrogen Production</li>
+        <li>Waste-to-Energy Concepts</li>
+        <li>Dark Fermentation Basics</li>
+      </ul>
+    </div>
 
-</div>
+    <div class="card skill-card">
+      <div class="skill-icon"><i class="fa-solid fa-laptop"></i></div>
+      <h3>Digital Skills</h3>
+      <ul class="skill-list">
+        <li>Microsoft Office</li>
+        <li>Canva</li>
+      </ul>
+    </div>
 
-<div class="card">
-<h3>🔬 Cell Biology & Immunology</h3>
-
-<ul>
-<li>Slide Preparation</li>
-<li>Antigen–Antibody Interaction Basics</li>
-<li>Basic Immunoassay Techniques</li>
-<li>Cell Structure Analysis</li>
-</ul>
-
-</div>
-
-<div class="card">
-<h3>🏭 Industrial Biotechnology</h3>
-
-<ul>
-<li>Biohydrogen Production</li>
-</ul>
-
-</div>
-
-<div class="card">
-<h3>💻 Other Skills</h3>
-
-<ul>
-<li>Microsoft Office</li>
-<li>Canva</li>
-</ul>
-
-</div>
-
-</div>
-
+  </div>
 </section>
-
 
 <!-- SOFT SKILLS -->
 
-<section class="section">
+<section class="section" id="soft-skills">
+  <div class="section-heading">
+    <div class="section-kicker">Personal strengths</div>
+    <h2 class="section-title">Soft Skills</h2>
+  </div>
 
-<h2 class="section-title">Soft Skills</h2>
-
-<div class="grid">
-
-<div class="card">
-<ul>
-<li>Communication</li>
-<li>Team Work</li>
-<li>Adaptability</li>
-</ul>
-</div>
-
-</div>
-
+  <div class="soft-skills">
+    <span class="skill-pill"><i class="fa-solid fa-comments"></i> Communication</span>
+    <span class="skill-pill"><i class="fa-solid fa-people-group"></i> Teamwork</span>
+    <span class="skill-pill"><i class="fa-solid fa-arrows-rotate"></i> Adaptability</span>
+    <span class="skill-pill"><i class="fa-solid fa-lightbulb"></i> Quick Learning</span>
+  </div>
 </section>
 
+<!-- INTERNSHIP EXPERIENCE -->
 
-<!-- INTERNSHIP -->
+<section class="section" id="internships">
+  <div class="section-heading">
+    <div class="section-kicker">Practical exposure</div>
+    <h2 class="section-title">Internship Experience</h2>
+  </div>
 
-<section class="section">
+  <div class="timeline">
 
-<h2 class="section-title">Internship Experience</h2>
+    <div class="card timeline-card">
+      <span class="tag">Microbiology</span>
+      <h3>Microbiology Intern – Sasaam Biologicals Pvt. Ltd.</h3>
+      <ul>
+        <li>Performed microbial culture techniques and staining methods.</li>
+        <li>Learned aseptic handling and laboratory safety procedures.</li>
+        <li>Assisted in sample preparation and analysis.</li>
+      </ul>
+    </div>
 
-<div class="card">
+    <div class="card timeline-card">
+      <span class="tag">Drug Discovery</span>
+      <h3>Phytochemicals & Drug Discovery – Institute of Innovations</h3>
+      <ul>
+        <li>Studied plant-based compound extraction methods.</li>
+        <li>Gained exposure to drug screening concepts.</li>
+      </ul>
+    </div>
 
-<h3>Microbiology Intern – Sasaam Biologicals Pvt. Ltd.</h3>
+    <div class="card timeline-card">
+      <span class="tag">Industrial Biotechnology</span>
+      <h3>Biohydrogen Production from Solid Waste – Anna University</h3>
+      <ul>
+        <li>Explored waste-to-energy approaches for converting organic waste into biohydrogen.</li>
+        <li>Studied dark fermentation and hydrogen production using anaerobic microorganisms.</li>
+        <li>Learned about sustainable waste management and renewable energy generation.</li>
+      </ul>
+    </div>
 
-<ul>
-<li>Performed microbial culture techniques and staining methods.</li>
-<li>Learned aseptic handling and laboratory safety procedures.</li>
-<li>Assisted in sample preparation and analysis.</li>
-</ul>
-
-</div>
-
-<div class="card">
-
-<h3>Phytochemicals & Drug Discovery – Institute of Innovations</h3>
-
-<ul>
-<li>Studied plant-based compound extraction methods.</li>
-<li>Gained exposure to drug screening concepts.</li>
-</ul>
-
-</div>
-
-<div class="card">
-
-<h3>Biohydrogen Production from Solid Waste – Anna University</h3>
-
-<ul>
-<li>Waste to Energy – Converting organic waste into biohydrogen.</li>
-<li>Dark Fermentation – Producing hydrogen using anaerobic microorganisms.</li>
-<li>Sustainability – Reducing waste and generating clean renewable energy.</li>
-</ul>
-
-</div>
-
+  </div>
 </section>
 
+<!-- PROJECTS -->
 
-<!-- PROJECT -->
+<section class="section" id="projects">
+  <div class="section-heading">
+    <div class="section-kicker">Research & innovation</div>
+    <h2 class="section-title">Projects</h2>
+  </div>
 
-<section class="section">
-
-<h2 class="section-title">Projects</h2>
-
-<div class="card">
-
-<h3>Frugal DNA Extraction Kit from Saliva (Group Project)</h3>
-
-<ul>
-
-<li>Collaborated with a team to design a low-cost DNA extraction method using casein-based filtration.</li>
-
-<li>Assisted in experimental setup and procedure.</li>
-
-<li>Focused on rural diagnostic applications.</li>
-
-</ul>
-
-</div>
-
+  <div class="card project-card">
+    <div class="project-icon"><i class="fa-solid fa-vial"></i></div>
+    <span class="tag">Group Project</span>
+    <h3>Frugal DNA Extraction Kit from Saliva</h3>
+    <ul class="skill-list">
+      <li>Collaborated with a team to design a low-cost DNA extraction method using casein-based filtration.</li>
+      <li>Assisted in experimental setup and procedure.</li>
+      <li>Focused on potential rural diagnostic applications.</li>
+    </ul>
+  </div>
 </section>
 
+<!-- WORKSHOPS -->
+
+<section class="section" id="workshops">
+  <div class="section-heading">
+    <div class="section-kicker">Learning beyond the classroom</div>
+    <h2 class="section-title">Workshops</h2>
+    <p class="section-subtitle">
+      Hands-on exposure and learning through technical workshops.
+    </p>
+  </div>
+
+  <div class="card activity-card">
+    <div class="activity-icon">
+      <i class="fa-solid fa-water"></i>
+    </div>
+    <div>
+      <span class="activity-label">Workshop | 17–19 September 2026</span>
+      <h3>Analytical Approaches for Marine Microplastics: From Sampling to Characterization</h3>
+      <p>
+        Conducted by the National Facility for Coastal and Marine Research
+        and Centre for Ocean Research, Sathyabama Institute of Science
+        and Technology.
+      </p>
+      <p style="margin-top:10px;">
+        Gained exposure to marine microplastics, their effects on marine
+        organisms, sampling approaches and characterization techniques,
+        along with laboratory facilities and analytical instruments.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- TECHNICAL EVENTS -->
+
+<section class="section" id="events">
+  <div class="section-heading">
+    <div class="section-kicker">Academic participation</div>
+    <h2 class="section-title">Technical Events</h2>
+  </div>
+
+  <div class="card activity-card">
+    <div class="activity-icon">
+      <i class="fa-solid fa-file-powerpoint"></i>
+    </div>
+    <div>
+      <span class="activity-label">Paper Presentation</span>
+      <h3>Valorisation of Banana Pseudostem Waste into Biodegradable Biofoam for Sustainable Packaging</h3>
+      <p>
+        Participated in a paper presentation on the conversion of
+        banana pseudostem waste into biodegradable biofoam for
+        sustainable packaging, conducted by the Department of
+        Biomedical Engineering, Easwari Engineering College.
+      </p>
+    </div>
+  </div>
+</section>
 
 <!-- CERTIFICATIONS -->
 
-<section class="section">
+<section class="section" id="certifications">
+  <div class="section-heading">
+    <div class="section-kicker">Courses & achievements</div>
+    <h2 class="section-title">Certifications</h2>
+  </div>
 
-<h2 class="section-title">Certifications</h2>
-
-<div class="card">
-
-<ul>
-
-<li>Phytochemistry and Drug Discovery – Institute of Innovations (Online) (1st Year)</li>
-
-<li>Microbiology Internship – Sasaam Biologicals Pvt. Ltd. (2nd Year)</li>
-
-<li>Experimental Biotechnology – NPTEL (2nd Year)</li>
-
-<li>Food Science and Technology – NPTEL (2nd Year)</li>
-
-<li>Microsensors, Implantable Devices and Rodent Surgeries for Biomedical Applications – NPTEL (2nd Year)</li>
-
-<li>Biohydrogen Production from Solid Waste – Anna University (2nd Year)</li>
-
-</ul>
-
-</div>
-
+  <div class="card">
+    <ul class="cert-list">
+      <li><i class="fa-solid fa-certificate"></i>
+        <span>Phytochemistry and Drug Discovery – Institute of Innovations (Online) (1st Year)</span>
+      </li>
+      <li><i class="fa-solid fa-certificate"></i>
+        <span>Microbiology Internship – Sasaam Biologicals Pvt. Ltd. (2nd Year)</span>
+      </li>
+      <li><i class="fa-solid fa-certificate"></i>
+        <span>Experimental Biotechnology – NPTEL (2nd Year)</span>
+      </li>
+      <li><i class="fa-solid fa-certificate"></i>
+        <span>Food Science and Technology – NPTEL (2nd Year)</span>
+      </li>
+      <li><i class="fa-solid fa-certificate"></i>
+        <span>Microsensors, Implantable Devices and Rodent Surgeries for Biomedical Applications – NPTEL (2nd Year)</span>
+      </li>
+      <li><i class="fa-solid fa-certificate"></i>
+        <span>Biohydrogen Production from Solid Waste – Anna University (2nd Year)</span>
+      </li>
+    </ul>
+  </div>
 </section>
-
 
 <!-- ONLINE PROFILE -->
 
-<section class="section">
+<section class="section" id="profile">
+  <div class="section-heading">
+    <div class="section-kicker">Connect professionally</div>
+    <h2 class="section-title">Online Profile</h2>
+  </div>
 
-<h2 class="section-title">Online Profile</h2>
-
-<div class="card profile">
-
-<h3>LinkedIn</h3>
-
-<p>
-
-<a href="https://www.linkedin.com/in/aishwarya-veerakumar-0b2099328" target="_blank">
-
-linkedin.com/in/aishwarya-veerakumar-0b2099328
-
-</a>
-
-</p>
-
-</div>
-
+  <div class="card profile-card">
+    <div>
+      <h3><i class="fa-brands fa-linkedin" style="color:#2879b9;"></i> LinkedIn</h3>
+      <p>Connect with me for professional opportunities.</p>
+    </div>
+    <a class="profile-link"
+       href="https://www.linkedin.com/in/aishwarya-veerakumar-0b2099328"
+       target="_blank" rel="noopener noreferrer">
+      View LinkedIn Profile <i class="fa-solid fa-arrow-up-right-from-square"></i>
+    </a>
+  </div>
 </section>
 
-<section class="section" id="contact">
+<!-- CONTACT -->
 
-<h2 class="section-title">Contact Me</h2>
+<section class="contact-section section" id="contact">
+  <div class="section-heading">
+    <div class="section-kicker">Let's connect</div>
+    <h2 class="section-title">Contact Me</h2>
+    <p class="section-subtitle">
+      Open to learning opportunities, internships and professional connections.
+    </p>
+  </div>
 
-<div class="card profile">
+  <div class="contact-grid">
+    <div class="contact-item">
+      <i class="fa-regular fa-envelope"></i>
+      <strong>Email</strong>
+      <a href="mailto:aishwaryaveerakumar81@gmail.com">
+        aishwaryaveerakumar81@gmail.com
+      </a>
+    </div>
 
-<p>
-<strong>📧 Email:</strong>
-<a href="mailto:aishwaryaveerakumar81@gmail.com">
-aishwaryaveerakumar81@gmail.com
-</a>
-</p>
+    <div class="contact-item">
+      <i class="fa-solid fa-location-dot"></i>
+      <strong>Location</strong>
+      <span>Chennai, Tamil Nadu, India</span>
+    </div>
 
-<br>
+    <div class="contact-item">
+      <i class="fa-brands fa-linkedin"></i>
+      <strong>LinkedIn</strong>
+      <a href="https://www.linkedin.com/in/aishwarya-veerakumar-0b2099328"
+         target="_blank" rel="noopener noreferrer">
+        Connect with me
+      </a>
+    </div>
+  </div>
 
-<strong>📍 Location:</strong>
-Chennai, Tamil Nadu, India
-</p>
-
-<br>
-
-<a href="https://drive.google.com/file/d/1mBLcXV1zHlU-G83pUK2mnxK0SAXFLs60/view?usp=drivesdk" download class="resume-btn">
-📄 Download Resume
-</a>
-
-
-</div>
-
+  <div class="resume-area">
+    <a href="https://drive.google.com/file/d/1mBLcXV1zHlU-G83pUK2mnxK0SAXFLs60/view?usp=drivesdk"
+       target="_blank" rel="noopener noreferrer" class="resume-btn">
+      <i class="fa-solid fa-file-arrow-down"></i> View / Download Resume
+    </a>
+  </div>
 </section>
 
+</main>
 
 <footer>
-
-© 2026 Aishwarya V | Biotechnology Portfolio
-
+  © 2026 Aishwarya Veerakumar | Biotechnology Portfolio
 </footer>
 
-</div>
+<script>
+const menuBtn = document.getElementById('menuBtn');
+const navLinks = document.getElementById('navLinks');
+
+menuBtn.addEventListener('click', () => {
+  const isOpen = navLinks.classList.toggle('open');
+  menuBtn.setAttribute('aria-expanded', String(isOpen));
+  menuBtn.innerHTML = isOpen
+    ? '<i class="fa-solid fa-xmark"></i>'
+    : '<i class="fa-solid fa-bars"></i>';
+});
+
+document.querySelectorAll('.nav-links a').forEach(link => {
+  link.addEventListener('click', () => {
+    navLinks.classList.remove('open');
+    menuBtn.setAttribute('aria-expanded', 'false');
+    menuBtn.innerHTML = '<i class="fa-solid fa-bars"></i>';
+  });
+});
+</script>
 
 </body>
 </html>
+
+
+
+
