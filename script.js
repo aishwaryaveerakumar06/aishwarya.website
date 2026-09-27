@@ -1,71 +1,56 @@
-// Scroll Reveal Animation
-
-const cards = document.querySelectorAll(".card");
-const sections = document.querySelectorAll(".section");
+const menuBtn = document.getElementById("menuBtn");
+const navLinks = document.getElementById("navLinks");
 
 
-const revealOnScroll = () => {
+// Mobile Navigation
 
-    const triggerBottom = window.innerHeight * 0.85;
+if (menuBtn && navLinks) {
 
+    menuBtn.addEventListener("click", function () {
 
-    cards.forEach(card => {
+        const isOpen = navLinks.classList.toggle("open");
 
-        const cardTop = card.getBoundingClientRect().top;
+        menuBtn.setAttribute(
+            "aria-expanded",
+            String(isOpen)
+        );
 
+        if (isOpen) {
 
-        if(cardTop < triggerBottom){
+            menuBtn.innerHTML =
+                '<i class="fa-solid fa-xmark"></i>';
 
-            card.style.opacity = "1";
-            card.style.transform = "translateY(0)";
+        } else {
 
-        }
-
-    });
-
-
-    sections.forEach(section => {
-
-        const sectionTop = section.getBoundingClientRect().top;
-
-
-        if(sectionTop < triggerBottom){
-
-            section.style.opacity = "1";
-            section.style.transform = "translateY(0)";
+            menuBtn.innerHTML =
+                '<i class="fa-solid fa-bars"></i>';
 
         }
 
     });
 
-};
 
+    // Close mobile menu after clicking a link
 
+    document.querySelectorAll(".nav-links a").forEach(function (link) {
 
-window.addEventListener("scroll", revealOnScroll);
+        link.addEventListener("click", function () {
 
+            navLinks.classList.remove("open");
 
-window.addEventListener("load", () => {
+            menuBtn.setAttribute(
+                "aria-expanded",
+                "false"
+            );
 
+            menuBtn.innerHTML =
+                '<i class="fa-solid fa-bars"></i>';
 
-    cards.forEach(card => {
-
-        card.style.opacity = "0";
-        card.style.transform = "translateY(40px)";
-        card.style.transition = "0.6s ease";
-
-    });
-
-
-    sections.forEach(section => {
-
-        section.style.opacity = "0";
-        section.style.transform = "translateY(40px)";
-        section.style.transition = "0.8s ease";
+        });
 
     });
 
+}
 
-    revealOnScroll();
-
-});
+       
+       
